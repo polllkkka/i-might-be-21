@@ -6,18 +6,8 @@
   <title>CHAPTER 21 // HOUSE OF BALLOONS</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --bg: #09090b;
-      --card: rgba(18, 18, 22, 0.75);
-      --text: #f4f4f5;
-      --muted: #a1a1aa;
-      --border: rgba(255, 255, 255, 0.12);
-      --accent: #ffffff;
-      --spotify: #1ed760;
-    }
-
     * {
       box-sizing: border-box;
       margin: 0;
@@ -25,71 +15,25 @@
     }
 
     body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: 'Space Grotesk', sans-serif;
+      background-color: #0b0b0e;
+      color: #ffffff;
+      font-family: 'Space Grotesk', -apple-system, sans-serif;
       min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
       padding: 24px 16px;
-      position: relative;
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .grain {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 10;
-      opacity: 0.045;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    }
-
-    .balloon {
-      position: fixed;
-      border-radius: 50%;
-      filter: blur(45px);
-      z-index: 1;
-      opacity: 0.18;
-      pointer-events: none;
-      animation: float 14s infinite ease-in-out alternate;
-    }
-
-    .balloon-1 {
-      width: 280px;
-      height: 340px;
-      background: radial-gradient(circle, #ffffff 0%, transparent 70%);
-      top: -60px;
-      left: -80px;
-    }
-
-    .balloon-2 {
-      width: 320px;
-      height: 380px;
-      background: radial-gradient(circle, #3f3f46 0%, transparent 70%);
-      bottom: -100px;
-      right: -100px;
-      animation-duration: 18s;
-    }
-
-    @keyframes float {
-      0% { transform: translateY(0px) rotate(0deg); }
-      100% { transform: translateY(45px) rotate(8deg); }
     }
 
     .card {
-      position: relative;
-      z-index: 5;
       width: 100%;
-      max-width: 440px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      backdrop-filter: blur(20px);
+      max-width: 420px;
+      background: #141418;
+      border: 1px solid rgba(255, 255, 255, 0.15);
       border-radius: 20px;
-      padding: 36px 28px;
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.9);
+      padding: 36px 24px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+      text-align: left;
     }
 
     .tag {
@@ -98,38 +42,38 @@
       font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 5px 12px;
+      color: #a1a1aa;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 4px 12px;
       border-radius: 999px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
 
     .title {
       font-family: 'Syne', sans-serif;
-      font-size: 2.3rem;
+      font-size: 2.2rem;
       line-height: 1.05;
       font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.02em;
       margin-bottom: 8px;
     }
 
     .subtitle {
-      color: var(--muted);
-      font-size: 0.92rem;
+      color: #8b8b94;
+      font-size: 0.88rem;
       letter-spacing: 0.05em;
-      margin-bottom: 30px;
+      margin-bottom: 28px;
     }
 
     .details {
       display: flex;
       flex-direction: column;
       gap: 14px;
-      margin-bottom: 32px;
-      border-top: 1px dashed var(--border);
-      border-bottom: 1px dashed var(--border);
-      padding: 20px 0;
+      margin-bottom: 28px;
+      border-top: 1px dashed rgba(255, 255, 255, 0.15);
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
+      padding: 18px 0;
     }
 
     .detail-item {
@@ -140,10 +84,10 @@
     }
 
     .detail-label {
-      color: var(--muted);
+      color: #71717a;
       text-transform: uppercase;
       font-size: 0.72rem;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.1em;
     }
 
     .detail-value {
@@ -165,12 +109,12 @@
       width: 100%;
       padding: 15px 20px;
       border-radius: 12px;
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-decoration: none;
       text-transform: uppercase;
-      transition: all 0.25s ease;
+      transition: background 0.2s ease, transform 0.15s ease;
     }
 
     .btn svg {
@@ -180,9 +124,73 @@
     }
 
     .btn-primary {
-      background: var(--accent);
-      color: #000;
-      border: 1px solid var(--accent);
+      background: #ffffff;
+      color: #000000;
     }
 
-    .btn-
+    .btn-primary:active {
+      transform: scale(0.98);
+    }
+
+    .btn-secondary {
+      background: #1f1f26;
+      color: #ffffff;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .btn-secondary:active {
+      transform: scale(0.98);
+    }
+
+    .footer-quote {
+      margin-top: 24px;
+      text-align: center;
+      font-size: 0.75rem;
+      color: #52525b;
+      font-style: italic;
+      letter-spacing: 0.04em;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <span class="tag">Chapter 21 // Trilogy Edition</span>
+    
+    <h1 class="title">HOUSE OF<br>BALLOONS</h1>
+    <p class="subtitle">THIS IS A HAPPY HOUSE</p>
+
+    <div class="details">
+      <div class="detail-item">
+        <span class="detail-label">Runtime</span>
+        <span class="detail-value">21:00 — Late</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Location</span>
+        <span class="detail-value">The Loft (Съемная квартира)</span>
+      </div>
+      <div class="detail-item">
+        <span class="detail-label">Dress Code</span>
+        <span class="detail-value">Starboys & Stargirls (B&W)</span>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <!-- Беседа -->
+      <a href="https://t.me/+qmuGKQWeEK4zZGZi" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+        Войти в чат вечеринки
+      </a>
+
+      <!-- Spotify -->
+      <a href="https://open.spotify.com/playlist/09kCkVYbZCcf016dRYocSI?si=bcf0bf328ac44f28&pt=9fa31a3d9aecf0db9e15f14cc2135bd0" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.563.387-.857.207-2.348-1.435-5.304-1.76-8.785-.964-.335.077-.67-.133-.746-.469-.077-.334.132-.67.467-.746 3.809-.871 7.077-.496 9.714 1.115.293.18.386.563.207.857zm1.224-2.72c-.226.368-.71.482-1.077.256-2.687-1.652-6.785-2.131-9.965-1.166-.413.127-.848-.106-.973-.518-.127-.413.106-.848.519-.973 3.632-1.102 8.147-.568 11.24 1.334.368.226.483.71.256 1.067zm.105-2.835C14.692 8.95 9.375 8.775 6.297 9.71c-.493.15-1.016-.129-1.166-.621-.149-.493.13-1.016.621-1.167 3.532-1.073 9.404-.866 13.115 1.338.445.264.59.838.327 1.282-.264.443-.838.59-1.282.327z"/></svg>
+        Добавить трек в плейлист
+      </a>
+    </div>
+
+    <div class="footer-quote">
+      "Bring the 707 out"
+    </div>
+  </main>
+</body>
+</html>
